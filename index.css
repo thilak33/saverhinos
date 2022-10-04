@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 0.521vw 1.042vw;
+  display: flex;
+  align-items: center;
+  box-shadow: 0vw 0.10416vw 0.260416vw rgba(0, 0, 0, 0.1607843137);
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+}
+.header .title {
+  color: #fff;
+  padding: 0.521vw;
+  font-size: 1.5vw;
+  margin-right: 2.083vw;
+}
+.header .title img {
+  width: 3.229vw;
+  height: 3.438vw;
+}
+.header .header-item {
+  display: flex;
+  font: normal normal normal 1.125vw/1.5vw arial;
+  margin-right: 2.042vw;
+}
+.header .header-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+.main-section {
+  background: linear-gradient(90deg, rgb(230, 221, 212) 20%, rgb(237, 224, 212) 40%, rgb(243, 212, 185) 60%);
+  padding: 5.526vw 2.604vw 2.604vw 2.604vw;
+  width: 100%;
+}
+.main-section .left-container {
+  font: normal normal bold 5.208vw/6.25vw arial;
+  text-align: center;
+  padding: 2.604vw 0;
+}
+.main-section .right-container {
+  display: flex;
+  align-items: center;
+  padding: 0 32.125vw;
+}
+.main-section .right-container .container-item {
+  border: 0.26vw solid rgb(166, 117, 74);
+  position: relative;
+  border-radius: 1.302vw;
+  padding: 2.604vw;
+}
+.main-section .right-container .content {
+  font: normal normal normal 1.043vw/1.25vw arial;
+}
+.main-section .right-container .content .title {
+  font: normal normal bold 2.25vw/2.5vw arial;
+  margin-bottom: 1.042vw;
+}
+.main-section .right-container .rhino-ani-img {
+  position: absolute;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  right: 0;
+  padding: 0.26vw 0 0 0.26vw;
+  background: white;
+  width: 5.208vw;
+  height: 2.435vw;
+  background: rgb(243, 212, 185);
+}
+.main-section .right-container .rhino-ani-img img {
+  width: 5.208vw;
+  height: 2.435vw;
+}
+
+.intro {
+  height: 200vh;
+  overflow: visible;
+  position: relative;
+  z-index: 3;
+}
+
+#main {
+  font: normal normal 600 2.5vw/2.75vw arial;
+  margin: 0 10.042vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  background: #fff;
+  transform: translateY(calc(50vh - 50% + 1.4585vw));
+  padding: 0.052vw;
+}
+
+#gradient {
+  display: flex;
+  height: 200vh;
+  background: linear-gradient(180deg, rgb(166, 117, 74) 20%, rgb(159, 168, 124) 40%, rgb(247, 180, 28) 60%);
+  transform: translateY(2.604vw);
+  position: absolute;
+  z-index: 2;
+  background-color: #000;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  overflow: hidden;
+  width: calc(100% + 0.104vw);
+  margin-top: -2.24vw;
+  top: 0;
+}
+
+.species-container-try {
+  display: flex;
+  padding: 5.208vw 0 5.208vw 5.208vw;
+  overflow: hidden;
+}
+.species-container-try .left-container {
+  margin-right: 5.208vw;
+  width: 31.25vw;
+  padding-top: 10vw;
+}
+.species-container-try .left-container .title {
+  font: normal normal bold 4vw/4.5vw arial;
+  margin-bottom: 2vw;
+}
+.species-container-try .left-container .desc {
+  font: normal normal normal 1.5vw/2vw arial;
+}
+.species-container-try .left-container .b-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5.208vw 10.417vw 0;
+}
+.species-container-try .left-container .b-container .r-s-prev {
+  width: 4vw;
+  height: 4vw;
+  background-image: url(images/prev.png);
+  background-size: 4vw 4vw;
+  border: none;
+}
+.species-container-try .left-container .b-container .r-s-next {
+  width: 4vw;
+  height: 4vw;
+  background-image: url(images/next.png);
+  background-size: 4vw 4vw;
+  border: none;
+}
+.species-container-try .right-container {
+  grid-column: 5/span 4;
+  grid-row: 1/1;
+  --card-width: 28.646vw;
+  --card-height: 45.808vw;
+  --card-item-gap: 2.51vw;
+  --spicies-count: 5;
+  --card-item-width: calc(var(--card-width) + var(--card-item-gap));
+}
+.species-container-try .right-container .rhino {
+  width: var(--card-width);
+  height: var(--card-height);
+  overflow: visible;
+  position: relative;
+}
+.species-container-try .right-container .rhino .type-container {
+  display: grid;
+  grid-template-columns: repeat(var(--spicies-count), 1fr);
+  width: calc(var(--card-item-width) * var(--card-width));
+  height: var(--card-height);
+  position: absolute;
+  top: 0;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item {
+  will-change: transform;
+  width: var(--card-item-width);
+  height: var(--card-height);
+  position: relative;
+  transition: opacity 1s, transform 1s;
+  border-radius: 1.042vw;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container {
+  width: var(--card-width);
+  height: var(--card-height);
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .rhino-species-img img {
+  width: 28.646vw;
+  height: 18.62vw;
+  border-top-left-radius: 1.042vw;
+  border-top-right-radius: 1.042vw;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .species-info-container {
+  padding: 2.042vw;
+  background: #eaebe4;
+  box-shadow: white;
+  border-bottom-left-radius: 1.042vw;
+  border-bottom-right-radius: 1.042vw;
+  min-height: 28.881vw;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .species-info-container .s-specs {
+  margin-bottom: 0.521vw;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .species-info-container .s-specs:last-child {
+  margin-bottom: 0;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .species-info-container .r-title {
+  font: normal normal bold 1.563vw/1.875vw arial;
+  text-align: center;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .species-info-container .tt-a {
+  font: normal normal bold 1.25vw/1.563vw arial;
+  min-width: 7.292vw;
+  max-width: 7.292vw;
+}
+.species-container-try .right-container .rhino .type-container .rhino-species-item .species-container .species-info-container .tt-v {
+  font: normal normal normal 1.25vw/1.563vw arial;
+}
+
+.dyk-section {
+  margin: 0 10.417vw;
+}
+.dyk-section .title {
+  text-align: center;
+  font: normal normal normal 3.25vw/4.563vw arial;
+}
+.dyk-section .dyk-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dyk-section .dyk-container .stat-column {
+  position: relative;
+  will-change: transform;
+  display: flex;
+  height: 25vw;
+}
+.dyk-section .dyk-container .figure {
+  font: normal normal bold 10vw/10vw arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dyk-section .dyk-container .desc {
+  font: normal normal normal 1.8vw/2.2vw arial;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dyk-section .dyk-container #poached-col {
+  color: rgb(166, 117, 74);
+}
+.dyk-section .dyk-container #spcies-col {
+  color: rgb(159, 168, 124);
+}
+.dyk-section .dyk-container #threat-col {
+  color: rgb(247, 180, 28);
+}/*# sourceMappingURL=index.css.map */
